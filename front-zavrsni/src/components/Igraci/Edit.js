@@ -121,7 +121,7 @@ class EditPlayer extends React.Component {
                         id="pIme"
                         name="ime"
                         value={this.state.igrac.ime}
-                        onChange={(e) => this.valueInputChanged(e)}
+                        onChange={(e) => this.valueInputChange(e)}
                       />{" "}
                       <br />
                     </Form.Group>
@@ -132,7 +132,7 @@ class EditPlayer extends React.Component {
                         as="select"
                         id="pPozicija"
                         value={this.state.igrac.pozicija}
-                        onChange={(e) => this.valueInputChanged(e)}
+                        onChange={(e) => this.valueInputChange(e)}
                       >
                         <option></option>
                         <option value="Napadac">Napadac</option>
@@ -149,7 +149,7 @@ class EditPlayer extends React.Component {
                         id="pBrojDresa"
                         name="brojDresa"
                         value={this.state.igrac.brojDresa}
-                        onChange={(e) => this.valueInputChanged(e)}
+                        onChange={(e) => this.valueInputChange(e)}
                       />{" "}
                       <br />
                     </Form.Group>
@@ -161,7 +161,7 @@ class EditPlayer extends React.Component {
                         id="pDatum"
                         name="datum"
                         value={this.state.igrac.datum}
-                        onChange={(e) => this.valueInputChanged(e)}
+                        onChange={(e) => this.valueInputChange(e)}
                       />{" "}
                       <br />
                     </Form.Group>
