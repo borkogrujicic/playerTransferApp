@@ -70,6 +70,10 @@ class Igraci extends React.Component {
     this.props.history.push("/igraci/transfer/" + igracId);
   }
 
+  goToEdit(igracId) {
+    this.props.history.push("/igraci/" + igracId);
+  }
+
   searchValueInputChange(event) {
     let control = event.target;
 
@@ -101,6 +105,14 @@ class Igraci extends React.Component {
                     onClick={() => this.delete(igrac.id)}
                   >
                     Delete
+                  </Button>
+                </td>,
+                <td>
+                  <Button
+                    variant="danger"
+                    onClick={() => this.goToEdit(igrac.id)}
+                  >
+                    Edit
                   </Button>
                 </td>,
               ]
@@ -195,7 +207,7 @@ class Igraci extends React.Component {
               <th>Na prodaju</th>
               <th>Naziv kluba</th>
               {window.localStorage["role"] == "ROLE_ADMIN"
-                ? [<th>Brisanje</th>, <th>Transfer</th>]
+                ? [<th>Brisanje</th>, <th>Edit</th>, <th>Transfer</th>]
                 : null}
             </tr>
           </thead>
